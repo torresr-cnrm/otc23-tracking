@@ -62,6 +62,7 @@ if __name__ == '__main__':
                                                      date, 0.002)
             
             outname = "%(path)s/%(sign_type)s_{}.nc".format(date.strftime("%Y%m%d"))
+            AC_det.write_file(path=outp_dir, filename=outname)
             C_det.write_file(path=outp_dir, filename=outname)
     
             os.remove(os.path.join(work_dir, 'temp.nc'))
